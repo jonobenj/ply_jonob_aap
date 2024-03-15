@@ -12,7 +12,7 @@
       ansible.builtin.command: pihole -up
       when: pihole
       register: phout
-      #      changed_when: phout contains 'update available'
+      changed_when: 'update available' in phout.stdout
 
     - name: debug
       debug:
