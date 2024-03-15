@@ -1,0 +1,5 @@
+---
+
+- name: APT Update
+  ansible.builtin.apt:
+    upgrade: full
