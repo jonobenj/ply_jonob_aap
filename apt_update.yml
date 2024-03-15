@@ -1,5 +1,8 @@
 ---
 
 - name: APT Update
-  ansible.builtin.apt:
-    upgrade: full
+  hosts: all
+  tasks:
+    - name: Update
+      ansible.builtin.apt:
+        upgrade: full
