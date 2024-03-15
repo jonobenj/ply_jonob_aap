@@ -3,6 +3,17 @@
 - name: APT Update
   hosts: all
   tasks:
-    - name: Update
+    - name: General Update
       ansible.builtin.apt:
         upgrade: full
+      become: true
+
+    - name: Update PiHole
+      ansible.builtin.command: pihole -up
+      when: pihole
+      register: phout
+      changed_when: phout contains 'update available'
+
+    - name: debug
+      debug:
+        var: phout
