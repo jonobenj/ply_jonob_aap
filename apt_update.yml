@@ -13,7 +13,3 @@
       when: pihole
       register: phout
       changed_when: "'update available' in phout.stdout"
-
-    - name: debug
-      debug:
-        var: phout
