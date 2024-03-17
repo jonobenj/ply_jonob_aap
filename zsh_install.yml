@@ -1,0 +1,6 @@
+---
+
+- name: zsh install
+  hosts: all
+  tasks:
+    include_role: jonob_zsh
