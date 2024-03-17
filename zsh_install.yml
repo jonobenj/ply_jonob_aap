@@ -3,4 +3,6 @@
 - name: zsh install
   hosts: all
   tasks:
-    include_role: jonob_zsh
+    - name: install_zsh
+      ansible.builtin.include_role:
+        name: zsh_install
