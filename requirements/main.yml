@@ -1,0 +1,4 @@
+---
+
+- name: zsh_install
+  src: https://github.com/jonobenj/zsh_install.git
