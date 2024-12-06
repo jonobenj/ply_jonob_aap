@@ -6,3 +6,4 @@
     - name: install_zsh
       ansible.builtin.include_role:
         name: zsh_install
+      ansible_user: root
