@@ -2,10 +2,9 @@
 
 - name: zsh install
   hosts: all
+  become: true
   tasks:
     - name: install_zsh
       ansible.builtin.include_role:
         name: zsh_install
-      vars:
-        ansible_user: root
     - debug: "var=ansible_distribution"
