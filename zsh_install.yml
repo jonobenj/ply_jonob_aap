@@ -6,5 +6,6 @@
     - name: install_zsh
       ansible.builtin.include_role:
         name: zsh_install
-      ansible_user: root
+      vars:
+        ansible_user: root
     - debug: "var=ansible_distribution"
