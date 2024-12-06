@@ -7,4 +7,3 @@
     - name: install_zsh
       ansible.builtin.include_role:
         name: zsh_install
-    - debug: "var=ansible_distribution"
