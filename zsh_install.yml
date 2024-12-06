@@ -7,3 +7,5 @@
     - name: install_zsh
       ansible.builtin.include_role:
         name: zsh_install
+      vars:
+        user: root
